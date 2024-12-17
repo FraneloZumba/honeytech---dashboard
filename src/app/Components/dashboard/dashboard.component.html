@@ -1,0 +1,33 @@
+<div class="header">
+  <h1>HoneyTech</h1>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h2>Temperatura y Humedad</h2>
+    <div class="value">{{ temperatureHumidity.value }}°C</div>
+    <div class="sub-value">Humedad: {{ temperatureHumidity.humidity }}%</div>
+  </div>
+
+  <div class="card">
+    <h2>Actividad de las Abejas</h2>
+    <div class="value">{{ beeActivity.value }}</div>
+    <div class="sub-value">{{ beeActivity.status }}</div>
+  </div>
+
+  <div class="card-small">
+    <h2>Peso de la Colmena</h2>
+    <div class="value">{{ hiveWeight.value }} kg</div>
+    <div class="sub-value">Progreso del Peso: {{ hiveWeight.progress }}%</div>
+  </div>
+
+  <div class="card-small">
+    <h2>Alertas en Tiempo Real</h2>
+    <div class="value">{{ alerts.value }}</div>
+    <div class="sub-value">{{ alerts.message }}</div>
+  </div>
+</div>
+
+<div class="header">
+  <p>&copy; 2024 HoneyTech | Todos los derechos reservados</p>
+</div>

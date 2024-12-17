@@ -1,0 +1,144 @@
+/* Establece Montserrat como la fuente principal */
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Fondo más claro */
+}
+
+/* Estilo del Header */
+.header {
+  background-color: #f39c12;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3vw;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center; /* Centrar contenido */
+}
+
+/* Estilos para las tarjetas (hexágonos) */
+.card, .card-small {
+  width: 243px;
+  height: 279px;
+  margin: 13.5px;
+  background-color: #f39c12;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: all 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 13.5px;
+  box-sizing: border-box;
+  border-radius: 13.5px;
+  position: relative;
+  overflow: hidden;
+  animation: levitate 2s ease-in-out infinite;
+}
+
+.card h2, .card-small h2 {
+  margin: 0;
+  font-size: 2.25vw;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.card .value, .card-small .value {
+  font-size: 3.6vw;
+  margin: 13.5px 0;
+  color: #fff;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.card .sub-value, .card-small .sub-value {
+  color: #f1c40f;
+  text-align: center;
+  line-height: 1.2;
+}
+
+.card:hover, .card-small:hover {
+  transform: scale(1.1);
+  clip-path: none;
+  border-radius: 13.5px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  background-color: #e67e22;
+  height: 306px;
+  width: 306px;
+}
+
+.card .value, .card-small .value,
+.card .sub-value, .card-small .sub-value {
+  display: none;
+}
+
+.card:hover .value, .card-small:hover .value,
+.card:hover .sub-value, .card-small:hover .sub-value {
+  display: block;
+}
+
+/* Estilo del Footer */
+.footer {
+  background-color: #f39c12;
+  padding: 20px;
+  text-align: center;
+  bottom: 0; /* Asegura que esté al final de la página */
+  width: 100%; /* Ocupa todo el ancho */
+  z-index: 10; /* Para asegurarse de que esté por encima del contenido */
+}
+
+.footer p {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+}
+
+/* Animación de levitación */
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .card, .card-small, .chatbot-container, .header, .footer {
+    width: 202.5px;
+    height: 234px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card, .card-small, .chatbot-container, .header, .footer {
+    width: 175.5px;
+    height: 207px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card, .card-small, .chatbot-container, .header, .footer {
+    width: 135px;
+    height: 157px;
+  }
+}
